@@ -5,7 +5,7 @@ import { Download } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { skills } from "@/i18n";
 
-export default function PdfDownload() {
+export default function PdfDownload({ compact = false }: { compact?: boolean }) {
   const { t } = useLanguage();
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -35,9 +35,14 @@ export default function PdfDownload() {
         onClick={handleDownload}
         aria-label={t.downloadCv}
         title={t.downloadCv}
-        className="w-16 h-16 mx-auto flex items-center justify-center bg-accent text-white rounded-full hover:scale-[1.015] active:scale-[0.98] transition-all cursor-pointer"
+        className={
+          compact
+            ? "flex items-center gap-1.5 px-3 py-1.5 bg-accent text-white rounded-full text-xs font-medium hover:scale-[1.015] active:scale-[0.98] transition-all cursor-pointer whitespace-nowrap"
+            : "w-16 h-16 mx-auto flex items-center justify-center bg-accent text-white rounded-full hover:scale-[1.015] active:scale-[0.98] transition-all cursor-pointer"
+        }
       >
-        <Download className="w-6 h-6" />
+        <Download className={compact ? "w-3.5 h-3.5" : "w-6 h-6"} />
+        {compact && t.downloadCv}
       </button>
 
       {/* Hidden printable content */}
