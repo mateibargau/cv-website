@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://matei-bargau.vercel.app"),
+  metadataBase: new URL("https://mateibargau.vercel.app"),
   title: "Matei Bărgău - Full-stack Web Developer",
   description:
     "Experienced full-stack developer with expertise in healthcare applications, specializing in Django and Angular. Proficient in containerization, cloud infrastructure (AWS), and database management.",

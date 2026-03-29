@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://matei-bargau.vercel.app/sitemap.xml",
+    sitemap: "https://mateibargau.vercel.app/sitemap.xml",
   };
 }
